@@ -1,9 +1,44 @@
 @import "bootstrap/scss/bootstrap";
 
+$main-color: #ff7766;
+$custom-color: #eee;
 
-
-$main-color: rgb(242, 24, 227);
-
-h1 {
-     color: $main-color;
+@font-face {
+     font-family: cairo;
+     src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+     font-family: "cairo", 'Courier New', Courier, monospace;
+}
+.top-menu {
+     .navbar {
+          font-weight: bold !important;
+          padding: 0px 100px !important;
+          background-color: #fff !important;
+          .navbar-nav {
+               li > a {
+                    transition: all 0.5s ease;
+                    &:hover {
+                         color: $main-color !important;
+                         background-color: $custom-color;
+                         border-bottom: 1px solid $main-color;
+                    }
+               }
+          }
+     }
+}
+@media (max-width: 991px) {
+     .top-menu {
+          padding: 0px 20px !important;
+          .navbar-nav {
+               ul {
+                    padding-right: -100px !important;
+                    a {
+                         border-bottom: none !important;
+                         padding-right: 5px;
+                    }
+               }
+               
+          }
+     }
 }
