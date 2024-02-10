@@ -168,6 +168,29 @@ ul {
      -webkit-box-orient: vertical;
      overflow: hidden;
 }
+.sald-about {
+     .custom-img {
+          border-radius: 10px;
+          margin: 20px;
+     }
+     .custom-p {
+          line-height: 2em;
+     }
+     .fa-chevron-right,
+     .fa-chevron-left {
+          color: #252222;
+     }
+     a.carousel-control-prev{
+          position: absolute;
+          width: 0;
+          left: 7%;
+     }
+     a.carousel-control-next{
+          position: absolute;
+          width: 0;
+          right: 7%;
+     }
+}
 @media (max-width: 991px) {
      .top-menu {
           padding: 0px 20px !important;
