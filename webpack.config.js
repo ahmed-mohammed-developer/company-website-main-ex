@@ -8,7 +8,7 @@ module.exports ={
     entry: './src/js/index.js',
 
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.join(__dirname, 'build'),
         filename: 'js/bundle.js',
     },
 
@@ -53,7 +53,14 @@ module.exports ={
                 test: /\.html$/i,
                 loader: "html-loader",
               },
-            ]
+              {
+                test: require.resolve("jquery"),
+                loader: "expose-loader",
+                options: {
+                  exposes: ["$", "jQuery"],
+                },
+              },
+            ],
           },
           devServer: {
             static: {

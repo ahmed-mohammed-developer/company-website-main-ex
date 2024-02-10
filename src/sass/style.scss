@@ -10,6 +10,13 @@ $custom-color: #eee;
 body {
      font-family: "cairo", 'Courier New', Courier, monospace;
 }
+ul {
+     padding: 0 !important;
+}
+.container-fluid {
+     padding-inline: 0px !important;
+     overflow-x: hidden;
+}
 .top-menu {
      .navbar {
           font-weight: bold !important;
@@ -27,12 +34,146 @@ body {
           }
      }
 }
+.carousel-top{
+     .row{
+          display: block !important;
+     }
+     .carousel {
+          .carousel-item {
+               img {
+                    height: 450px;
+               }
+               .overlay{
+                    position: absolute;
+                    background-color: rgba(65, 155, 155, 0.5);
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex !important;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1;
+               }
+          }
+          .carousel-indicators{
+               button {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    margin: 20px 5px 0px 0px;
+                    &.active{
+                         background-color: $main-color;
+                    }
+               }
+          }
+          .carousel-caption {
+               h1 {
+                    font-weight: bold;
+                    color: white;
+                    margin-bottom: 50px;
+                    text-shadow: 1px 1px black;
+               }
+               h4 {
+                    width: 60%;
+                    color: $custom-color;
+                    text-shadow: 1px 1px black;
+               }
+          }
+     }
+}
+.custom-btn {
+     padding: 10px 20px;
+     color: $main-color !important;
+     border: 1px solid $main-color !important;
+     font-weight: bold !important;
+     &:hover,
+     &:focus {
+          background-color: $main-color !important;
+          color: $custom-color !important;
+          border: 1px solid $custom-color !important;
+     }
+     
+}
+.who-are-we {
+     h2 {
+          font-weight: bold;
+          margin-bottom: 20px;
+     }
+     .custom-p {
+          line-height: 2em;
+     }
+}
+.last-projects {
+     background-color: #ffffcc;
+     #last-projects-company {
+          width: 70%;
+          .thumbanl {
+               position: relative;
+               margin-bottom: 20px;
+               margin-top: 20px;
+               .caption2 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(65, 155, 155, 0.5);
+                    max-width: 100%;
+                    height: 100%;
+                    padding: 2%;
+                    text-align: center;
+                    color: #fff !important;
+                    text-shadow: 1px 1px #000;
+                    display: none;
+               }
+               .project-category {
+                    position: absolute;
+                    right: 0px;
+                    top: 5%;
+                    font-weight: bold;
+                    background-color: rgba(240, 240, 240, 0.75);
+                    padding: 10px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    box-shadow: 0px 5px 20px 0px #202020;
+               }
+          }
+          .carousel-control-prev{
+               color: #252222;
+               position: absolute;
+               left: -5%;
+               width: 0;
+          }
+          .carousel-control-next{
+               position: absolute;
+               color: #252222;
+               right: -5%;
+               width: 0;
+          }
+     }
+}
+.custom-btn-main {
+     padding: 20px;
+     background-color: $main-color !important;
+     color: white;
+     font-weight: bold;
+     width: 250px;
+     &:hover {
+          color: #000;
+     }
+}
+.p-details {
+     display: -webkit-box;
+     -webkit-line-clamp: 1;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+}
 @media (max-width: 991px) {
      .top-menu {
           padding: 0px 20px !important;
+          .navbar {
+               padding: 0px !important;
           .navbar-nav {
-               ul {
-                    padding-right: -100px !important;
                     a {
                          border-bottom: none !important;
                          padding-right: 5px;
@@ -42,3 +183,26 @@ body {
           }
      }
 }
+     @media (max-width: 767px) {
+          .carousel-top {
+               .carousel {
+                    .carousel-caption {
+                         h1 {
+                              font-size: 30px;
+                         }
+                         h4 {
+                              font-size: 18px;
+                              margin-bottom: 30px;
+                         }
+                    }
+                    .carousel-indicators{
+                         button {
+                              display: none;
+                         }
+                    }
+               }
+          }
+          .custom-btn-main {
+               max-width: fit-content !important;
+          }
+     }
