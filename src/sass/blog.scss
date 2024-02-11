@@ -1,0 +1,29 @@
+@import './varible';
+
+.banner-blog{
+     #banner-blog{
+          background-image: url(../img/banner-blog.jpg);
+     }
+}
+.posts {
+     .search-box {
+          padding: 15px;
+          margin-top: 5px;
+          box-shadow: 0px 1px 1px 1px $custom-color;
+          border: 1px solid $custom-color;
+     }
+     .card {
+          .card-text {
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               color: $card-text-coler;
+          }
+     }
+}
+.form-control {
+     &:focus {
+          border-color: $main-color !important;
+          box-shadow: none !important;
+     }
+}
