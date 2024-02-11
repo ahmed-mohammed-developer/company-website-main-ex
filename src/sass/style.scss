@@ -164,7 +164,7 @@ ul {
 }
 .p-details {
      display: -webkit-box;
-     -webkit-line-clamp: 1;
+     -webkit-line-clamp: 2;
      -webkit-box-orient: vertical;
      overflow: hidden;
 }
@@ -191,8 +191,26 @@ ul {
           right: 7%;
      }
 }
-.clinet-logo {
+.clieens {
      background-color: #419898;
+}
+.last-posts {
+     .card-body{
+          width: 90%;
+          border: 1px solid #cccccc;
+          border-radius: 5px;
+          position: relative;
+          background-color: white;
+          top: -17px;
+          left: -5%;
+     }
+     .card-title {
+          font-weight: bold;
+          font-size: 18px;
+     }
+     .card-text {
+          font-size: 14px;
+     }
 }
 @media (max-width: 991px) {
      .top-menu {
