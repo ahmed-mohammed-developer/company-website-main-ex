@@ -27,3 +27,38 @@
           box-shadow: none !important;
      }
 }
+.posts-detalis {
+     .card {
+          .card-body {
+               .card-text {
+                    color: $card-text-coler;
+               }
+               .card-title {
+                    font-weight: 800;
+                    color: $main-color;
+               }
+          }
+     }
+     .post-share {
+          color: $main-color;
+     }
+}
+.one-social {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 1px solid $card-text-coler;
+     color: $card-text-coler;
+     width: 45px;
+     height: 45px;
+     border-radius: 3px;
+     margin-left: 10px;
+     float: left;
+}
+.linkedin-social{
+     &:hover,
+     &:focus {
+          color: #fff;
+          background-color: #3b5998;
+     }
+}
