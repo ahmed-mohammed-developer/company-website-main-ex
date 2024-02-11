@@ -1,23 +1,45 @@
+@import './varible';
 .banner {
      #banner-img {
           background-image: url(../img/projects-banner.jpg);
           background-repeat: no-repeat;
           background-position: 50% 10%;
+          background-size: cover;
           height: 250px;
+          position: relative;
+          .overlay {
+               position: absolute;
+               background-color: rgba(65,155,155,0.5);
+               top: 0;
+               right: 0;
+               height: 100%;
+               width: 100%;
+               display: flex !important;
+               justify-content: center;
+               align-items: center;
+               .title1 {
+                    font-weight: bold;
+                    color: white;
+               }
+          }
      }
-     .overlay {
+     
+}
+.our-works {
+     .custom-btn-2{
+          color: #363636;
+          background-color: white;
+          border: none;
+          border-radius: 1px;
+          font-weight: bold;
           position: absolute;
-          background-color: rgba(65,155,155,0.5);
-          top: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          display: flex !important;
-          justify-content: center;
-          align-items: center;
-          .title1 {
-               font-weight: bold;
+          right: 25px;
+          top: 20px;
+          &:hover,
+          &:focus {
                color: white;
+               background-color: $main-color;
+               border: none;
           }
      }
 }
