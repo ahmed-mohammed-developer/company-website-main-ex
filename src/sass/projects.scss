@@ -62,3 +62,20 @@
      margin-top: 15px;
      margin-bottom: 15px;
    }
+   .project-detalis {
+     .card {
+          .card-body {
+               .card-title {
+                    font-weight: 800;
+                    color: $main-color;
+               }
+          }
+     }
+   }
+   @media (max-width: 576px) {
+     .project-detalis {
+          .thumb {
+               margin-inline: 15px;
+          }
+     }
+   }
