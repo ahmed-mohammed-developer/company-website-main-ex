@@ -16,17 +16,19 @@ $(function() {
           $(this).find('.proj52555ect-category').show();    
       }
       );
-      var pathname = window.location.pathname;//إحضار المسار المتواجدين فيه
+
+
+    var pathname = window.location.pathname;//إحضار المسار المتواجدين فيه
     console.log(pathname);
     $('.navbar-nav > li > a[href="'+pathname+'"]').parent().addClass('active');
     
     //إضافة الصنف الفعال للصفحات المتعلقة بصفحة المدونة
-    if (pathname == "/blog-details.html" || pathname == "/add-blog.html") {
+    if (pathname == "/blog-detalis.html" || pathname == "/add.blog.html") {
       $('.navbar-nav > li > a[href="/blog.html"]').parent().addClass('active');
     }
 
     //إضافة الصنف الفعال للصفحات المتعلقة بصفحة المشروع
-    if (pathname == "/project-details.html") {
+    if (pathname == "/project-detalis.html") {
         $('.navbar-nav > li > a[href="/projects.html"]').parent().addClass('active');
     }
     

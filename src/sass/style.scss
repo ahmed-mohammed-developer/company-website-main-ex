@@ -36,6 +36,10 @@ ul {
                          border-bottom: 1px solid $main-color;
                     }
                }
+               .active a {
+                    color: $main-color !important;
+                    border-bottom: 1px solid $main-color;
+               }
           }
      }
 }
